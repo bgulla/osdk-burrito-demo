@@ -1,5 +1,7 @@
 # OSDK Burrito Demo
 
+![HelmCharts](/static/screenshot.png?raw=true) 
+
 ## Installing via Helm-CLI (not Apollo)
 ```bash
 helm repo add bgulla https://bgulla.github.io/osdk-burrito-demo
