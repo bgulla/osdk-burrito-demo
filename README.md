@@ -1,6 +1,6 @@
 # OSDK Burrito Demo
 
-![HelmCharts](/static/screenshot.png?raw=true) 
+![HelmCharts](/src/static/screenshot.png?raw=true) 
 
 ## Installing via Helm-CLI (not Apollo)
 ```bash
