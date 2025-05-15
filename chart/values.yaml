@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: harbor.hokies.dev/bgulla/burrito-hunter
+  tag: demo
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

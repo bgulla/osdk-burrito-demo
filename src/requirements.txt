@@ -1,0 +1,5 @@
+Flask==2.2.5
+flask-restx
+folium
+# chipotle-burrito-hunter-sdk==0.1.0
+# foundry-sdk-runtime==0.2.0

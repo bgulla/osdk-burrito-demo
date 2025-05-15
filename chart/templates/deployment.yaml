@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "osdk-burrito-demo.fullname" . }}
+  labels:
+    app: {{ include "osdk-burrito-demo.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "osdk-burrito-demo.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "osdk-burrito-demo.name" . }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.targetPort }}
+          env:
+            - name: FOUNDRY_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: osdk-burrito-demo-secret
+                  key: FOUNDRY_HOST
+            - name: FOUNDRY_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: osdk-burrito-demo-secret
+                  key: FOUNDRY_TOKEN
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
