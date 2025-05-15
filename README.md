@@ -22,4 +22,5 @@ type: Opaque
 data:
   FOUNDRY_HOST: <base64-encoded-host>
   FOUNDRY_TOKEN: <base64-encoded-token>
+  FOUNDRY_URL: <base64-encoded-token>
 ```
