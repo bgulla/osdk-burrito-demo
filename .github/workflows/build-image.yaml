@@ -1,8 +1,6 @@
 name: Build and Push Image to GHCR
-
 on:
-  release:
-    types: [published]
+  push:
 
 env:
   REGISTRY: ghcr.io
