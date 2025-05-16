@@ -36,3 +36,7 @@ jobs:
           tags: | 
             ghcr.io/bgulla/osdk-burrito-demo:latest
           platforms: linux/amd64,linux/arm64
+          build-args: |
+            FOUNDRY_TOKEN=${FOUNDRY_TOKEN}
+            FOUNDRY_HOST=${FOUNDRY_HOST}
+            FOUNDRY_HOSTNAME=${FOUNDRY_HOST}
