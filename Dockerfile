@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the requirements file into the container
-COPY requirements.txt .
+COPY src/requirements.txt .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -20,10 +20,10 @@ RUN pip install chipotle_burrito_hunter_sdk==0.1.0 --upgrade \
 --extra-index-url "https://user:${FOUNDRY_TOKEN}@${FOUNDRY_URL}/artifacts/api/repositories/ri.foundry-sdk-asset-bundle.main.artifacts.repository/contents/release/pypi/simple"
 
 
-# # Copy the startup script into the container
-COPY templates /app/templates
-COPY app.py /app
-COPY static /app/static
+# copy required files
+COPY src/templates /app/templates
+COPY src/app.py /app
+COPY src/static /app
 
 # Define environment variable
 ENV FOUNDRY_TOKEN=""

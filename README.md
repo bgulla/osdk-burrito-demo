@@ -3,14 +3,15 @@
 ![Helm Chart Version](https://img.shields.io/badge/dynamic/yaml?label=helm%20chart&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fbgulla%2Fosdk-burrito-demo%2Fmain%2Fchart%2FChart.yaml)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/osdk-burrito-demo)](https://artifacthub.io/packages/search?repo=osdk-burrito-demo)
 ![Helm Repository](https://img.shields.io/badge/helm%20repo-bgulla/osdk--burrito--demo-blue)
-
 # OSDK Burrito Demo
-TLDR
 
+
+![HelmCharts](/src/static/screenshot.png?raw=true) 
 
 ## Testing Locally
 ### Required Initialization
 Since we do not want to store secrets inside of a Git repository, you need to perform a few actions before building the image locally.
+
 
 Move the example `burrito.env.example` file to `burrito.env` and fill in the missing variables
 ```bash
@@ -64,6 +65,7 @@ type: Opaque
 data:
   FOUNDRY_HOST: <base64-encoded-host>
   FOUNDRY_TOKEN: <base64-encoded-token>
+  FOUNDRY_URL: <base64-encoded-token>
 ```
 
 ## Installing via Helm-CLI (Debug only)
