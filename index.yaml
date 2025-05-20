@@ -3,11 +3,11 @@ entries:
   osdk-burrito-demo:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-05-20T16:14:15.951639928Z"
+    created: "2025-05-20T17:21:04.310801751Z"
     description: A Helm chart for deploying the osdk-burrito-demo application
-    digest: 971760467e42691b343593e81e35d1eacab160489dcdf8c0376941b23acf4eb8
+    digest: d25a08f30da863c0a1be83fb9e7112b067c2174f5a3291ae094489ef696c7c21
     name: osdk-burrito-demo
     urls:
     - https://github.com/bgulla/osdk-burrito-demo/releases/download/osdk-burrito-demo-0.1.0/osdk-burrito-demo-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-20T16:14:15.951317909Z"
+generated: "2025-05-20T17:21:04.310456747Z"
