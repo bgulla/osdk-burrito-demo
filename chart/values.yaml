@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: swirl-container-registry.palantirfoundry.com/burrito-hunter
+  repository: baryte-container-registry.palantirfoundry.com/burrito-hunter
   tag: 0.0.2
   pullPolicy: IfNotPresent
 
