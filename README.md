@@ -44,7 +44,7 @@ In circumstances where you want to live debug/edit the Python Flask code, you ar
 ```
 
 ### Running the container (Kubernetes/Apollo Environment)
-## Prerequesites 
+## Prereqs
 In order to run our container on Kubernetes, we will need to provide it with secrets for connecting to our Foundry/Ontology instance. 
 
 #### Via Apollo
