@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: harbor.hokies.dev/bgulla/burrito-hunter
-  tag: demo
+  repository: swirl-container-registry.palantirfoundry.com/burrito-hunter
+  tag: 0.0.2
   pullPolicy: IfNotPresent
 
 service:

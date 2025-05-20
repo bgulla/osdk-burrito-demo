@@ -12,17 +12,18 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy over the requirements for the osdk module
 # Accept build arguments for the foundry token and host
+RUN echo
 ARG FOUNDRY_TOKEN
-ARG FOUNDRY_HOST
+ARG FOUNDRY_URL
 RUN pip install chipotle_burrito_hunter_sdk==0.1.0 --upgrade \
---index-url "https://user:$FOUNDRY_TOKEN@${FOUNDRY_HOST}/artifacts/api/repositories/ri.artifacts.main.repository.ed533b2e-1398-4f50-bd68-39ce902fe8b8/contents/release/pypi/simple" \
---extra-index-url "https://user:$FOUNDRY_TOKEN@${FOUNDRY_HOST}/artifacts/api/repositories/ri.foundry-sdk-asset-bundle.main.artifacts.repository/contents/release/pypi/simple"
+--index-url "https://user:${FOUNDRY_TOKEN}@${FOUNDRY_URL}/artifacts/api/repositories/ri.artifacts.main.repository.ed533b2e-1398-4f50-bd68-39ce902fe8b8/contents/release/pypi/simple" \
+--extra-index-url "https://user:${FOUNDRY_TOKEN}@${FOUNDRY_URL}/artifacts/api/repositories/ri.foundry-sdk-asset-bundle.main.artifacts.repository/contents/release/pypi/simple"
 
 
 # # Copy the startup script into the container
 COPY templates /app/templates
 COPY app.py /app
-COPY static /app
+COPY static /app/static
 
 # Define environment variable
 ENV FOUNDRY_TOKEN=""
